@@ -11,7 +11,6 @@ namespace PresentationLayerApi.Features.Blog
         {
             _dA_Blog = dA_Blog;
         }
-
         #region GetBlogs
         public async Task<BlogListResponseModel> GetBlogs(int pageNo, int pageSize)
         {
