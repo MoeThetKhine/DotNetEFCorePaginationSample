@@ -21,6 +21,5 @@ namespace PresentationLayerApi.Features
             return StatusCode(500, ex.Message);
         }
         #endregion
-
     }
 }
