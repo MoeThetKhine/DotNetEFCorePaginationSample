@@ -19,6 +19,5 @@ namespace PresentationLayerApi.Features.Blog
             return await _dA_Blog.GetBlogs(pageNo, pageSize);
         }
         #endregion
-
     }
 }
