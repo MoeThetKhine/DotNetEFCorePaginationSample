@@ -7,7 +7,8 @@ namespace PresentationLayerApi
 {
     public static class ModularService
     {
-        public static IServiceCollection AddFeatures(this IServiceCollection services,WebApplicationBuilder builder)
+        #region AddFeatures
+        public static IServiceCollection AddFeatures(this IServiceCollection services, WebApplicationBuilder builder)
         {
             services.AddDbContextService(builder);
             services.AddDataAccess();
@@ -15,6 +16,9 @@ namespace PresentationLayerApi
             services.AddJsonService();
             return services;
         }
+        #endregion
+
+
         private static IServiceCollection AddDbContextService(this IServiceCollection services,WebApplicationBuilder builder)
         {
             builder.Services.AddDbContext<AppDbContext>(opt =>
