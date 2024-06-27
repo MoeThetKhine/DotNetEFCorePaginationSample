@@ -13,8 +13,10 @@ namespace PresentationLayerApi.Features.Blog
         {
             _bL_Blog = bL_Blog;
         }
+        #region HttpGet
+
         [HttpGet("{pageNo}/{pageSize}")]
-        public async Task<IActionResult>GetBlogs(int pageNo,int pageSize)
+        public async Task<IActionResult> GetBlogs(int pageNo, int pageSize)
         {
             try
             {
@@ -26,5 +28,8 @@ namespace PresentationLayerApi.Features.Blog
                 return InternalServerError(ex);
             }
         }
+
+        #endregion
+
     }
 }
