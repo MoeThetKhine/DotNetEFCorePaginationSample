@@ -31,20 +31,20 @@ namespace PresentationLayerApi
         #endregion
 
         #region AddDataAccess
-
-        #endregion
-
-        #region AddDbContextService
-        #endregion
-
-        #region AddDbContextService
-        #endregion
-
         private static IServiceCollection AddDataAccess(this IServiceCollection services)
         {
             services.AddScoped<DA_Blog>();
             return services;
         }
+
+        #endregion
+
+        #region AddDbContextService
+        #endregion
+
+        #region AddDbContextService
+        #endregion
+
 
         private static IServiceCollection AddBusinessLogic(this IServiceCollection services)
         {
