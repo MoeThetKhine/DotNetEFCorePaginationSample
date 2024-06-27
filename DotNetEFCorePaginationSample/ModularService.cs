@@ -18,8 +18,8 @@ namespace PresentationLayerApi
         }
         #endregion
 
-
-        private static IServiceCollection AddDbContextService(this IServiceCollection services,WebApplicationBuilder builder)
+        #region AddDbContextService
+        private static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
         {
             builder.Services.AddDbContext<AppDbContext>(opt =>
             {
@@ -28,11 +28,24 @@ namespace PresentationLayerApi
             });
             return services;
         }
+        #endregion
+
+        #region AddDataAccess
+
+        #endregion
+
+        #region AddDbContextService
+        #endregion
+
+        #region AddDbContextService
+        #endregion
+
         private static IServiceCollection AddDataAccess(this IServiceCollection services)
         {
             services.AddScoped<DA_Blog>();
             return services;
         }
+
         private static IServiceCollection AddBusinessLogic(this IServiceCollection services)
         {
             services.AddScoped<BL_Blog>();
