@@ -8,10 +8,13 @@ namespace PresentationLayerApi.Features
     [ApiController]
     public class BaseController : ControllerBase
     {
+        #region Content
         protected IActionResult Content(object obj)
         {
             return Ok(JsonConvert.SerializeObject(obj));
         }
+        #endregion
+
         protected IActionResult InternalServerError(Exception ex)
         {
             return StatusCode(500,ex.Message);
