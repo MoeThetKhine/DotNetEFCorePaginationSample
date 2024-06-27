@@ -39,18 +39,19 @@ namespace PresentationLayerApi
 
         #endregion
 
-        #region AddDbContextService
-        #endregion
-
-        #region AddDbContextService
-        #endregion
-
-
+        #region AddBusinessLogic
         private static IServiceCollection AddBusinessLogic(this IServiceCollection services)
         {
             services.AddScoped<BL_Blog>();
             return services;
         }
+        #endregion
+
+        #region AddDbContextService
+        #endregion
+
+
+
         private static IServiceCollection AddJsonService(this IServiceCollection services)
         {
             services.AddControllers().AddJsonOptions(opt =>
