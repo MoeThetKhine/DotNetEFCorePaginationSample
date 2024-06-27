@@ -57,6 +57,5 @@ namespace PresentationLayerApi
             return services;
         }
         #endregion
-
     }
 }
