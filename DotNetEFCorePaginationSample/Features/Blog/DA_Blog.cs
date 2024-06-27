@@ -14,7 +14,8 @@ namespace PresentationLayerApi.Features.Blog
         {
             _appDbContext = appDbContext;
         }
-        public async Task<BlogListResponseModel>GetBlogs(int pageNo,int pageSize)
+        #region GetBlogs
+        public async Task<BlogListResponseModel> GetBlogs(int pageNo, int pageSize)
         {
             try
             {
@@ -26,11 +27,11 @@ namespace PresentationLayerApi.Features.Blog
                 //pageSize = 10
                 //(2-1)*10 =>10 rows skipped (1 to 10 skipped) start from 11 to 20
 
-                var query =  _appDbContext.Blogs
+                var query = _appDbContext.Blogs
                     .OrderByDescending(x => x.BlogId);
 
                 var dataLst = await query
-                    .WithPagination(pageNo,pageSize)
+                    .WithPagination(pageNo, pageSize)
                     .ToListAsync();
                 var totalCount = await _appDbContext.Blogs.CountAsync();
                 var pageCount = totalCount / pageSize; //101 / 2 => 50(1)
@@ -39,10 +40,10 @@ namespace PresentationLayerApi.Features.Blog
                     pageCount++;
 
                 var lst = dataLst.Select(x => x.Change()).ToList();
-                return  new BlogListResponseModel()
+                return new BlogListResponseModel()
                 {
                     Blogs = lst,
-                    PageSetting = new PageSettingModel(pageNo,pageSize,totalCount,pageCount)
+                    PageSetting = new PageSettingModel(pageNo, pageSize, totalCount, pageCount)
                 };
 
             }
@@ -51,5 +52,8 @@ namespace PresentationLayerApi.Features.Blog
                 throw new Exception(ex.Message);
             }
         }
+
+        #endregion
+
     }
 }
