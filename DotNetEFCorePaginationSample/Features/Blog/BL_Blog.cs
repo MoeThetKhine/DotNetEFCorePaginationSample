@@ -11,7 +11,9 @@ namespace PresentationLayerApi.Features.Blog
         {
             _dA_Blog = dA_Blog;
         }
-        public async Task<BlogListResponseModel>GetBlogs(int pageNo,int pageSize)
+
+        #region GetBlogs
+        public async Task<BlogListResponseModel> GetBlogs(int pageNo, int pageSize)
         {
             if (pageNo <= 0)
                 throw new Exception("Page No is Invalid");
@@ -19,5 +21,7 @@ namespace PresentationLayerApi.Features.Blog
                 throw new Exception("Page Size is Invalid");
             return await _dA_Blog.GetBlogs(pageNo, pageSize);
         }
+        #endregion
+
     }
 }
