@@ -13,13 +13,16 @@ namespace Models.Features.PageSetting
         public int TotalCount {  get; set; }
         public int PageCount { get; set; }
         public bool IsEndOfPage { get { return PageCount == PageNo; } }
-        
-        public PageSettingModel(int pageNo,int pageSize, int totalCount,int pageCount)
+
+        #region PageSettingModel
+        public PageSettingModel(int pageNo, int pageSize, int totalCount, int pageCount)
         {
             PageNo = pageNo;
             PageSize = pageSize;
             TotalCount = totalCount;
             PageCount = pageCount;
         }
+        #endregion
+
     }
 }
