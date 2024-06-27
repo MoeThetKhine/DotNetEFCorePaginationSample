@@ -47,11 +47,7 @@ namespace PresentationLayerApi
         }
         #endregion
 
-        #region AddDbContextService
-        #endregion
-
-
-
+        #region AddJsonService
         private static IServiceCollection AddJsonService(this IServiceCollection services)
         {
             services.AddControllers().AddJsonOptions(opt =>
@@ -60,5 +56,10 @@ namespace PresentationLayerApi
             });
             return services;
         }
+        #endregion
+
+
+
+
     }
 }
