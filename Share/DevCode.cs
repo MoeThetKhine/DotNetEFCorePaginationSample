@@ -1,13 +1,12 @@
-﻿namespace Share
+﻿namespace Share;
+
+public static class DevCode
 {
-    public static class DevCode
+    public static IQueryable<TSource> WithPagination<TSource>
+        (this IQueryable<TSource>source,int pageNo,int pageSize)
     {
-        public static IQueryable<TSource> WithPagination<TSource>
-            (this IQueryable<TSource>source,int pageNo,int pageSize)
-        {
-            return source
-                .Skip((pageNo - 1) * pageSize)
-                .Take(pageSize);
-        }
+        return source
+            .Skip((pageNo - 1) * pageSize)
+            .Take(pageSize);
     }
 }
