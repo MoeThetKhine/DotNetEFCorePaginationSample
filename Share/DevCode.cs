@@ -1,5 +1,7 @@
 ﻿namespace Share;
 
+#region DevCode
+
 public static class DevCode
 {
     public static IQueryable<TSource> WithPagination<TSource>
@@ -10,3 +12,5 @@ public static class DevCode
             .Take(pageSize);
     }
 }
+
+#endregion
