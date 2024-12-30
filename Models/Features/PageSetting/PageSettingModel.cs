@@ -1,5 +1,7 @@
 ﻿namespace Models.Features.PageSetting;
 
+#region PageSettingModel
+
 public class PageSettingModel
 {
     public int PageNo { get; set; } = 1;
@@ -9,6 +11,7 @@ public class PageSettingModel
     public bool IsEndOfPage { get { return PageCount == PageNo; } }
 
     #region PageSettingModel
+
     public PageSettingModel(int pageNo, int pageSize, int totalCount, int pageCount)
     {
         PageNo = pageNo;
@@ -16,6 +19,9 @@ public class PageSettingModel
         TotalCount = totalCount;
         PageCount = pageCount;
     }
+
     #endregion
 
 }
+
+#endregion
