@@ -10,6 +10,7 @@ public class BlogController : BaseController
     {
         _bL_Blog = bL_Blog;
     }
+
     #region HttpGet
 
     [HttpGet("{pageNo}/{pageSize}")]
