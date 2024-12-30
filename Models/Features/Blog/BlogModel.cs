@@ -1,11 +1,10 @@
-﻿namespace Models.Features.Blog
+﻿namespace Models.Features.Blog;
+
+public class BlogModel
 {
-    public class BlogModel
-    {
-        [Key]
-        public long BlogId { get; set; } 
-        public string BlogTitle { get; set; }
-        public string BlogAuthor {  get; set; }
-        public string BlogContent {  get; set; }
-    }
+    [Key]
+    public long BlogId { get; set; } 
+    public string BlogTitle { get; set; }
+    public string BlogAuthor {  get; set; }
+    public string BlogContent {  get; set; }
 }
