@@ -1,7 +1,10 @@
 ﻿namespace Mapping;
 
+#region ChangeModel
+
 public static class ChangeModel
 {
+    #region BlogModel
     public static BlogModel Change(this Tbl_Blog dataModel)
     {
         return new BlogModel()
@@ -12,4 +15,8 @@ public static class ChangeModel
             BlogContent = dataModel.BlogContent,
         };
     }
+
+    #endregion
 }
+
+#endregion
