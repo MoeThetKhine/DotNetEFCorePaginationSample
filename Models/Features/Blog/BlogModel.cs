@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations; 
-
-namespace Models.Features.Blog
+﻿namespace Models.Features.Blog
 {
     public class BlogModel
     {
