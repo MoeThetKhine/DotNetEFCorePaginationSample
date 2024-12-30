@@ -1,7 +1,4 @@
-﻿using DbService.AppDbContexts;
-using Models.Features.Blog;
-
-namespace Mapping
+﻿namespace Mapping
 {
     public static class ChangeModel
     {
