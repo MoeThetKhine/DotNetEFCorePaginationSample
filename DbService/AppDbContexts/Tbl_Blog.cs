@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace DbService.AppDbContexts
+﻿namespace DbService.AppDbContexts
 {
     [Table("Tbl_Blog")]
     public class Tbl_Blog
