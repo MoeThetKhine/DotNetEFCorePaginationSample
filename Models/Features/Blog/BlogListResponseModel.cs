@@ -1,6 +1,4 @@
-﻿using Models.Features.PageSetting;
-
-namespace Models.Features.Blog
+﻿namespace Models.Features.Blog
 {
     public class BlogListResponseModel
     {
