@@ -1,6 +1,4 @@
-﻿using Models.Features.Blog;
-
-namespace PresentationLayerApi.Features.Blog
+﻿namespace PresentationLayerApi.Features.Blog
 {
     public class BL_Blog
     {
