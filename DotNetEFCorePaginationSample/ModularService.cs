@@ -1,9 +1,4 @@
-﻿using DbService.AppDbContexts;
-using Microsoft.EntityFrameworkCore;
-using PresentationLayerApi.Features.Blog;
-using System.Runtime.CompilerServices;
-
-namespace PresentationLayerApi
+﻿namespace PresentationLayerApi
 {
     public static class ModularService
     {
