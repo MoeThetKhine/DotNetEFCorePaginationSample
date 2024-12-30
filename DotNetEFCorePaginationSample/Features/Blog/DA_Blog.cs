@@ -7,7 +7,9 @@ public class DA_Blog
     {
         _appDbContext = appDbContext;
     }
+
     #region GetBlogs
+
     public async Task<BlogListResponseModel> GetBlogs(int pageNo, int pageSize)
     {
         try
