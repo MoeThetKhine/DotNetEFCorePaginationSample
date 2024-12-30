@@ -1,5 +1,7 @@
 ﻿namespace Models.Features.Blog;
 
+#region BlogModel
+
 public class BlogModel
 {
     [Key]
@@ -8,3 +10,5 @@ public class BlogModel
     public string BlogAuthor {  get; set; }
     public string BlogContent {  get; set; }
 }
+
+#endregion
