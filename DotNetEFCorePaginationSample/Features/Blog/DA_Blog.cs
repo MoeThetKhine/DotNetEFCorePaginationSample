@@ -1,11 +1,4 @@
-﻿using DbService.AppDbContexts;
-using Mapping;
-using Microsoft.EntityFrameworkCore;
-using Models.Features.Blog;
-using Models.Features.PageSetting;
-using Share;
-
-namespace PresentationLayerApi.Features.Blog
+﻿namespace PresentationLayerApi.Features.Blog
 {
     public class DA_Blog
     {

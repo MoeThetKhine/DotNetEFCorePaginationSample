@@ -4,3 +4,8 @@ global using Microsoft.EntityFrameworkCore;
 global using PresentationLayerApi.Features.Blog;
 global using Microsoft.AspNetCore.Mvc;
 global using Newtonsoft.Json;
+global using DbService.AppDbContexts;
+global using Mapping;
+global using Models.Features.Blog;
+global using Models.Features.PageSetting;
+global using Share;
