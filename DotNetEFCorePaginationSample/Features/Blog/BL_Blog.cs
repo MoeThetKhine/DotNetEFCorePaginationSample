@@ -7,7 +7,9 @@ public class BL_Blog
     {
         _dA_Blog = dA_Blog;
     }
+
     #region GetBlogs
+
     public async Task<BlogListResponseModel> GetBlogs(int pageNo, int pageSize)
     {
         if (pageNo <= 0)
@@ -16,5 +18,6 @@ public class BL_Blog
             throw new Exception("Page Size is Invalid");
         return await _dA_Blog.GetBlogs(pageNo, pageSize);
     }
+
     #endregion
 }
