@@ -3,6 +3,7 @@
 public static class ModularService
 {
     #region AddFeatures
+
     public static IServiceCollection AddFeatures(this IServiceCollection services, WebApplicationBuilder builder)
     {
         services.AddDbContextService(builder);
