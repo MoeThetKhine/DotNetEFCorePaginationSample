@@ -1,5 +1,7 @@
 ﻿namespace DbService.AppDbContexts;
 
+#region Table Blog
+
 [Table("Tbl_Blog")]
 public class Tbl_Blog
 {
@@ -9,3 +11,5 @@ public class Tbl_Blog
     public string BlogAuthor {  get; set; }
     public string BlogContent {  get; set; }
 }
+
+#endregion
