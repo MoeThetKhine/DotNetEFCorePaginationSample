@@ -1,16 +1,15 @@
-﻿namespace Mapping
+﻿namespace Mapping;
+
+public static class ChangeModel
 {
-    public static class ChangeModel
+    public static BlogModel Change(this Tbl_Blog dataModel)
     {
-        public static BlogModel Change(this Tbl_Blog dataModel)
+        return new BlogModel()
         {
-            return new BlogModel()
-            {
-                BlogId = dataModel.BlogId,
-                BlogTitle = dataModel.BlogTitle,
-                BlogAuthor = dataModel.BlogAuthor,
-                BlogContent = dataModel.BlogContent,
-            };
-        }
+            BlogId = dataModel.BlogId,
+            BlogTitle = dataModel.BlogTitle,
+            BlogAuthor = dataModel.BlogAuthor,
+            BlogContent = dataModel.BlogContent,
+        };
     }
 }
