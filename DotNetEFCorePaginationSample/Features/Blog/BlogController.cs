@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace PresentationLayerApi.Features.Blog
+﻿namespace PresentationLayerApi.Features.Blog
 {
     [Route("api/[controller]")]
     [ApiController]
